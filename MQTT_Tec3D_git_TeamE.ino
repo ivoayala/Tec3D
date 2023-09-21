@@ -76,7 +76,7 @@ void callback(char* topic, byte* message, unsigned int length) {
 
   // If topic = "casa", check message is either "Uno" or "Dos". 
   // Changes the output state according to the message
-  if (String(topic) == "TeamA_sub") {
+  if (String(topic) == "TeamE_sub") {
     Serial.print("Changing output to ");
     if(messageTemp == "Uno"){
       Serial.println("Uno");
@@ -94,10 +94,10 @@ void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
     // Attempt to connect
-    if (client.connect("ESP32Client_TeamA")) { //"ESPClient_3" represent the client name that connects to broker
+    if (client.connect("ESP32Client_TeamE")) { //"ESPClient_3" represent the client name that connects to broker
       Serial.println("connected");
       // Subscribe
-      client.subscribe("TeamA_sub");          //SUBSCRIBE topic
+      client.subscribe("TeamE_sub");          //SUBSCRIBE topic
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -135,7 +135,7 @@ void loop() {
       dtostrf(buttonState, 1, 2, tempString);
       Serial.print("Estado: ");
       Serial.println(tempString);
-      client.publish("TeamA", tempString);      //PUBLISH topic
+      client.publish("TeamE", tempString);      //PUBLISH topic
 
     delay(1);  // delay in between reads for stability
 
