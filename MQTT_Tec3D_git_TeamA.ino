@@ -10,6 +10,7 @@
 #include <WiFi.h>    //Selected when using ESP32
 #endif
 
+#include <PubSubClient.h>
 
 // Wifi security
 
