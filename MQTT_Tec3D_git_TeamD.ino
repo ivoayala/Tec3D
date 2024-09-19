@@ -2,10 +2,15 @@
 
 *********/
 
-#include <WiFi.h>   //Whe using ESP32
-//#include <ESP8266WiFi.h>  //Whe using ESP8266
-#include <PubSubClient.h>
+#include <Arduino.h>
 
+#if defined(ESP8266)
+#include <ESP8266WiFi.h>
+#else
+#include <WiFi.h>
+#endif
+
+#include <PubSubClient.h>
 
 // Wifi security
 
