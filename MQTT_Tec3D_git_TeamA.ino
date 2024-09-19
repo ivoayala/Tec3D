@@ -79,7 +79,7 @@ void callback(char* topic, byte* message, unsigned int length) {
   Serial.println();
 
 
-  // If topic = "casa", check message is either "Uno" or "Dos". 
+  // If topic = "TeamA_sub", check message is either "Uno" or "Dos". 
   // Changes the output state according to the message
   if (String(topic) == "TeamA_sub") {
     Serial.print("Changing output to ");
