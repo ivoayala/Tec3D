@@ -7,16 +7,15 @@
 #if defined(ESP8266)
 #include <ESP8266WiFi.h>
 #else
-#include <WiFi.h>    //Selected when using ESP32
+#include <WiFi.h>    //Automatically selected when using ESP32
 #endif
 
 #include <PubSubClient.h>
 
-
 // Wifi security
 
-const char* ssid = "xxxxxxxxx";
-const char* password = "xxxxxxxxx";
+const char* ssid = "Tec-IoT";
+const char* password = "spotless.magnetic.bridge";
 
 
 // MQTT Broker IP address
