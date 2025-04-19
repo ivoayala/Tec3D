@@ -129,12 +129,14 @@ void loop() {
     // print out the state of the button:
     Serial.println(buttonState);
     
-    // Check if input button has been pressed
-    if (buttonState > 0){
+    // Check buttons current state
+    if (buttonState == 1){
       digitalWrite(LED, HIGH);
-      delay(500);               // delay
+    }else{
       digitalWrite(LED, LOW);
     }
+    delay(500);               // delay
+    
       // Convert the value to a char array
       char tempString[2]; // Changed size to 2.  
       tempString[0] = (buttonState == HIGH) ? '1' : '0';  //Button state
