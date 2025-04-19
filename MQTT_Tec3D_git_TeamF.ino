@@ -136,8 +136,10 @@ void loop() {
       digitalWrite(LED, LOW);
     }
       // Convert the value to a char array
-      char tempString[8];
-      dtostrf(buttonState, 1, 2, tempString);
+      char tempString[2]; // Changed size to 2.  
+      tempString[0] = (buttonState == HIGH) ? '1' : '0';  //Button state
+      tempString[1] = '\0';         // Null-terminate the string. 
+    
       Serial.print("Estado: ");
       Serial.println(tempString);
       client.publish("TeamF", tempString);      //PUBLISH topic
