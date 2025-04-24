@@ -14,8 +14,8 @@
 
 // Wifi security
 
-const char* ssid = "ciberfisicos";
-const char* password = "12345678";
+const char* ssid = "Tec-IoT";
+const char* password = "spotless.magnetic.bridge";
 
 
 // MQTT Broker IP address
