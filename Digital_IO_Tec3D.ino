@@ -10,7 +10,7 @@ int LED = 23;
 
 // the setup routine runs once when you press reset:
 void setup() {
-  // initialize serial communication
+  // initialize serial comms
   Serial.begin(115200);
 
   // make the pushbutton's pin an input and LED pin as output:
@@ -37,3 +37,4 @@ void loop() {
   delay(1);  // delay in between reads for stability
 
 }
+
