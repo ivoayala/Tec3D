@@ -19,7 +19,7 @@ const char* password = "12345678";
 
 
 // MQTT Broker IP address
-const char* mqtt_server = "xx.xx.xx.xx";
+const char* mqtt_server = " 10.25.113.24";
 //const char* mqtt_server = "broker.hivemq.com";
 
 WiFiClient espClient;
@@ -151,4 +151,5 @@ void loop() {
 
     }
 }
+
 
